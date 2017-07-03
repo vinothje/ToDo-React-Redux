@@ -15,8 +15,8 @@ class ToDoList extends Component {
     renderList() {
         return _.map(this.props.todolist, todo => {
            return (
-               <li className="list-group-item" key={todo.id}>
-                 <Link to={`/todo/${todo.id}`}>{todo.name}
+               <li className="list-group-item" key={todo.todo_id}>
+                 <Link to={`/todo/${todo.todo_id}`}>{todo.todo_name}
                  </Link>
                    <button className="btn btn-danger pull-xs-right"
                            onClick={this.onClickDelete.bind(this, todo)}>Delete</button>

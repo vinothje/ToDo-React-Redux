@@ -1,5 +1,6 @@
 export const DELETETODO = 'delete_todo';
 export const LISTTODO = 'list_todo';
+export const NEWTODO = 'new_todo';
 
 export function deleteToDo(todo) {
     console.log('delete is clickec', todo);
@@ -10,13 +11,16 @@ export function deleteToDo(todo) {
 }
 
 export function listToDo() {
-    const payload = [
-        {id: 1, name: 'job1'},
-        {id: 2, name: 'job2'},
-        {id: 3, name: 'job3'}
-        ];
+    const payload = [];
     return {
         type: LISTTODO,
         payload: payload
     }
+}
+
+export function newToDo(payload) {
+    return {
+        type: NEWTODO,
+        payload: payload
+    };
 }
